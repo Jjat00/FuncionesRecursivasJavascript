@@ -1,0 +1,17 @@
+{
+    "name": "goo",
+    "version": "1.0.0",
+    "description": "Ejercicios listas y recursion",
+    "main": "src/index.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "author": "Andrés M. Castillo",
+    "license": "MIT",
+    "devDependencies": {
+        "jest": "^24.5.0"
+    },
+    "dependencies": {
+        "functional-light": "^0.1.0"
+    }
+}
