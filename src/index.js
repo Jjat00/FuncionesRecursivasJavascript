@@ -34,19 +34,6 @@ function mayorValor(lista) {
 }
 console.log("1. Mayor Valor de [1, 3, 4, 20] --> ", mayorValor([1, 3, 4, 20]))
 
-/**
- *      Contrato: lista -> número
- *      Propósito: obtener el elemento con el mínimo valor
- *      Definición: minValor(lista) -> ...
- *      Ejemplo: console.log(minValor([1,3,4,20])) -> 1
- */
-function minValor(lista) {
-    if (longitud(lista) == 1) {
-        return first(lista)
-    } else {
-        return Math.min(first(lista), minValor(rest(lista)))
-    }
-}
 
 /** 
  *      Contrato: lista -> número
@@ -174,7 +161,19 @@ function eliminarUnElemento(elemento, lista) {
         }
     }
 }
-
+/**
+ *      Contrato: lista -> número
+ *      Propósito: obtener el elemento con el mínimo valor
+ *      Definición: minValor(lista) -> ...
+ *      Ejemplo: console.log(minValor([1,3,4,20])) -> 1
+ */
+function minValor(lista) {
+    if (longitud(lista) == 1) {
+        return first(lista)
+    } else {
+        return Math.min(first(lista), minValor(rest(lista)))
+    }
+}
 
 /**
  * 5. Genere una lista de los primeros n términos de la serie de Fibonacci
@@ -472,8 +471,14 @@ function map(operacion, lista) {
 }
 console.log("15. función map: ", map((x) => 2 * x, [1, 2, 3, 5]))
 
+/**
+ *      Contrato: núermo -> número
+ *      Propósito: suma 2 a un elemento 
+ *      Definición:  suma2(elemento)
+ *      Ejemplo: console.log(suma2(3)) -> 5
+ */
 function suma2(elemento) {
     return elemento + 2
 }
 
-module.exports = { mayorValor, promedio, invertirOrden, ordenarAscendente, serieFiboacci, eliminarCaracteres, insertarElemento, buscarElemento, eliminar, concatenarListas, mayorque, buscarPares, map, buscarIndice, insertarElementoListaOrdenada, suma2 }
+module.exports = { mayorValor, promedio, invertirOrden, ordenarAscendente, serieFiboacci, eliminarCaracteres, insertarElemento, buscarElemento, eliminar, concatenarListas, mayorque, buscarPares, map, buscarIndice, insertarElementoListaOrdenada, suma2, longitud, eliminarUltimoElemento, obtenerUltimoElemento }
