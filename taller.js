@@ -17,20 +17,19 @@ console.log("-----------------------------------------------------------------")
 console.log("\t\t\tSOLUCIÓN TALLER 2 JAVASCRIPT PARTE 2 LISTAS CON ESTRUCTURAS")
 console.log("---------------------------------------------------------------\n")
 
-
 const cancion1 = {
     nombre: "How to fly",
     album: "How to fly",
     artista: "Sticky Fingers",
     duracion: 330,
-    estrellas: 3
+    estrellas: 5
 }
 const cancion2 = {
     nombre: "Coma white",
     album: "Coma white",
     artista: "Desconocido",
     duracion: 520,
-    estrellas: 1
+    estrellas: 4
 }
 const cancion3 = {
     nombre: "La vela se apaga",
@@ -43,8 +42,8 @@ const cancion4 = {
     nombre: "Quien quiere",
     album: "No hay opción",
     artista: "Parabellum",
-    duracion: 120,
-    estrellas: 2
+    duracion: 314,
+    estrellas: 3
 }
 
 const misCanciones = [cancion1, cancion2, cancion3, cancion4]
@@ -188,42 +187,34 @@ function estrellasCanciones(list) {
  * @param {*} n 
  * @param {*} list 
  */
-function eliminarCancionN(n, list) {
+function eliminarCancionN(n, list1, list) {
     if (isEmpty(list)) {
         return []
     } else {
-        if (cancionN(n, list) == [first(list)]) {
-            return cons(first(list), eliminarCancionN(n, rest(list)))
+        if (cancionN(n, list1) != first(list)) {
+            return cons(first(list), eliminarCancionN(n, list1, rest(list)))
         } else {
-            return eliminarCancionN(n, rest(list))
+            return rest(list)
         }
     }
 }
 
 function cancionN(n, list) {
-    if (isEmpty(list)) {
-        return []
+    if (longitud(list) - 1 == n) {
+        return obtenerUltimoElemento(list)
     } else {
-        if (n == longitud(list) - 1) {
-            return cons(obtenerUltimoElemento(list), cancionN(n, eliminarUltimoElemento(list)))
-        } else {
-            return cancionN(n, eliminarUltimoElemento(list))
-        }
+        return cancionN(n, eliminarUltimoElemento(list))
     }
 }
 
 
 //console.log(buscarCancionPorNombre("La vela se apaga", misCanciones))
 //console.log(buscarCancionPorArtista("Sticky Fingers", misCanciones))
-//console.log(duracionListaReproduccionConformato(duracionEnSegundosListaReproduccion(misCanciones)))
-//console.log(cancionesMasDeDosEstrellas(misCanciones))
-//console.log(cancionesFavoritas(misCanciones))
-//console.log(imprimirTitulosYDuracion(misCanciones))
-//console.log(ordenarPeorAMejorCancion(estrellasCanciones(misCanciones), misCanciones))
-
-console.log(cancionN(2, misCanciones)[0] == [misCanciones[2]][0])
-console.log(cancionN(1, misCanciones))
-console.log([misCanciones[1]])
+console.log(duracionListaReproduccionConformato(duracionEnSegundosListaReproduccion(misCanciones)))
+    //console.log(cancionesMasDeDosEstrellas(misCanciones))
+    //console.log(cancionesFavoritas(misCanciones))
+    //console.log(imprimirTitulosYDuracion(misCanciones))
+console.log(ordenarPeorAMejorCancion(estrellasCanciones(misCanciones), misCanciones))
 
 
-console.log(eliminarCancionN(2, misCanciones))
+//console.log(eliminarCancionN(0, misCanciones, misCanciones))

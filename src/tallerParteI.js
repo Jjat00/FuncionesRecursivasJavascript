@@ -1,25 +1,23 @@
 /**
  *--------------------------------------------------------------------------
- *                              TALLER
+ *                      SOLUCIÓN TALLER 2 JAVASCRIPT PARTE I
  *--------------------------------------------------------------------------
- *Archivo: taller.js
- *Autor: Jaimen Aza < userjjat00@gmail.com>,
+ *Archivo: tallerParteI.js
+ *Autor: Jaimen Aza <jaimen.aza@correounivalle.edu.com>
  *Fecha: 2019 - 07 - 23
  *--------------------------------------------------------------------------
- *Utilidad: funciones recursivas con el fin de manejar listas (Paradigma Funcional)
+ *Utilidad: Crear funciones recursivas con el fin de manejar listas (Paradigma Funcional)
  *--------------------------------------------------------------------------
  */
 
 const { cons, first, rest, isEmpty, isList } = require('functional-light');
 
 console.log("----------------------------------------------------")
-console.log("\t\t\tSOLUCIÓN TALLER 2 JAVASCRIPT")
+console.log("\t\t\tSOLUCIÓN TALLER 2 JAVASCRIPT PARTE I")
 console.log("----------------------------------------------------\n")
-
 
 /**
  *  1. Encontrar el mayor valor de una lista
- * 
  *      Contrato: lista -> número
  *      Propósito: Encontrar el elemento de mayor valor en una lista
  *      Definición:  mayorValor(lista) -> ...
@@ -51,7 +49,6 @@ function longitud(lista) {
 
 /**
  * 2. Encontrar el promedio de los valores de una lista
- * 
  *      Contrato: lista -> número
  *      Propósito: obtener el promedio de los valores de una lista
  *      Definición:  promedio(lista) -> ...
@@ -83,7 +80,6 @@ function sumaLista(lista) {
 
 /**
  * 3. Invertir el orden de los elementos de una lista
- * 
  *      Contrato: lista -> lista
  *      Propósito: invertir los elementos de una lista
  *      Definición: invertirOrden(lista) -> ...
@@ -128,7 +124,6 @@ function eliminarUltimoElemento(lista) {
 
 /**
  * 4. Ordenar de manera ascendente una lista
- * 
  *      Contrato: lista -> lista
  *      Propósito: Ordenar de manera ascendente una lista
  *      Definición:  ordenarAscendente(lista) -> ...
@@ -177,7 +172,6 @@ function minValor(lista) {
 
 /**
  * 5. Genere una lista de los primeros n términos de la serie de Fibonacci
- * 
  *      Contrato: número -> lista
  *      Propósito: Generar una lista de los primeros n términos de la serie de Fibonacci
  *      Definición: serieFiboacci(n) -> ...
@@ -221,7 +215,6 @@ function fibonacci(n) {
 
 /**
  * 6. Dada una lista, eliminar todos los elementos que no sean números
- * 
  *      Contrato: lista -> lista
  *      Propósito: Dada una lista, eliminar todos los elementos que no sean números
  *      Definición: eliminarCaracteres(lista) -> ...
@@ -324,7 +317,6 @@ function indiceListaOrdenada(x, lista) {
 
 /**
  * 9. Implemente una función que inserta un dato en una lista que siempre está ordenada
- * 
  *      Contrato: x, lista  -> número
  *      Propósito: insertar un dato x en una lista que siempre está ordenada
  *      Definición: insertarElementoListaOrdenada(x, lista) -> ...
@@ -337,7 +329,6 @@ console.log("9. Insertar dato y ordenar lista: ", insertarElementoListaOrdenada(
 
 /**
  * 10. Implemente una función que busca un elemento en una lista desordenada
- * 
  *      Contrato: x, lista  -> bool
  *      Propósito: buscar un elemento en una lista desordenada
  *      Definición: buscarElemento(x, lista) -> ...
@@ -356,7 +347,6 @@ console.log("10. buscarElemento elemento x en lista desordenada: ", buscarElemen
 
 /**
  * 11. Implemente una función que elimina el elemento n de la lista
- * 
  *      Contrato: n, lista  -> lista
  *      Propósito: eliminar el elemento n de la lista
  *      Definición: eliminar(n, lista) -> ...
@@ -383,7 +373,6 @@ function obtenerElemento(n, lista) {
 
 /**
  * 12. Concatenar dos listas
- * 
  *      Contrato: lista,lista -> lista
  *      Propósito: concatenar 2 listas
  *      Definición: concatenarListas(lista1, lista2) -> ...
@@ -400,7 +389,6 @@ console.log("12. Concatenar 2 listas: ", concatenarListas([1, 2, 4], [5, 6, 3]))
 
 /**
  * 13. Encontrar los valores mayores que un numero x dado
- * 
  *      Contrato: x ,lista -> lista
  *      Propósito: Encontrar los valores mayores que un numero x dado
  *      Definición:  mayorque(x, lista) -> ...
@@ -421,7 +409,6 @@ console.log("13. Numero mayores que x: ", mayorque(6, [3, 5, 8, 9]))
 
 /**
  * 14. Encontrar los numeros pares de una lista
- * 
  *      Contrato: lista -> lista
  *      Propósito: Encontrar los numeros pares de una lista
  *      Definición: buscarPares(lista) -> ...
@@ -456,7 +443,6 @@ function par(elemento) {
 
 /**
  * 15. Aplicar una operacion a cada elemento de una lista
- * 
  *      Contrato: operacion,lista -> lista
  *      Propósito: Aplicar una operacion a cada elemento de una lista
  *      Definición:  map(operacion, lista)

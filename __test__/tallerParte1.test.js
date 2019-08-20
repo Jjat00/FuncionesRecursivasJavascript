@@ -1,4 +1,4 @@
-const { mayorValor, promedio, invertirOrden, buscarIndice, insertarElementoListaOrdenada, ordenarAscendente, serieFiboacci, eliminarCaracteres, insertarElemento, buscarElemento, eliminar, concatenarListas, mayorque, buscarPares, map, suma2 } = require('../src/index');
+const { mayorValor, promedio, invertirOrden, buscarIndice, insertarElementoListaOrdenada, ordenarAscendente, serieFiboacci, eliminarCaracteres, insertarElemento, buscarElemento, eliminar, concatenarListas, mayorque, buscarPares, map, suma2 } = require('../src/tallerParteI');
 
 test('1. Mayor Valor de [1,2,3] tiene que ser 3', () => { expect(mayorValor([1, 2, 3])).toBe(3) })
 test('2. Promedio de [1,2,3] tiene que ser 2', () => { expect(promedio([1, 2, 3])).toBe(2) })
